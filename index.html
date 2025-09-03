@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>To-Do List</title>
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
+      🌙
+  </button>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">To-Do List</h1>
+    <div id="language-container">
+        <label for="language-select">🌐 Language:</label>
+        <select id="language-select">
+            <option value="en" selected>English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+    
+    <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter your task..." />
+        <select id="priority-select">
+            <option value="low">🟢 Low</option>
+            <option value="medium" selected>🟡 Medium</option>
+            <option value="high">🔴 High</option>
+        </select>
+        <select id="category-select">
+            <option value="general" selected>📁 General</option>
+            <option value="work">💼 Work</option>
+            <option value="personal">🏠 Personal</option>
+            <option value="shopping">🛒 Shopping</option>
+            <option value="study">📚 Study</option>
+        </select>
+        <input type="date" id="due-date-input" />
+        <button type="submit">Add</button>
+    </form>
+    <div id="suggestions-container">
+        <h3>💡 Suggested Tasks</h3>
+        <ul id="suggestions-list"></ul>
+    </div>
+    <div id="search-container">
+        <label for="search-input">Search Tasks:</label>
+        <input type="text" id="search-input" placeholder="Type to search..." />
+    </div>
+    <div id="filter-container">
+        <label for="filter-select">Filter by Category:</label>
+        <select id="filter-select">
+            <option value="all" selected>📂 All</option>
+            <option value="work">💼 Work</option>
+            <option value="personal">🏠 Personal</option>
+            <option value="shopping">🛒 Shopping</option>
+            <option value="study">📚 Study</option>
+            <option value="general">📁 General</option>
+        </select>
+    </div>
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
