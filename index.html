@@ -2,64 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do List Enhanced</title>
   <link rel="stylesheet" href="styles.css" />
-  <title>To-Do List</title>
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark/light mode">
-      🌙
-  </button>
 </head>
 <body>
   <div class="container">
-    <h1 class="title">To-Do List</h1>
-    <div id="language-container">
-        <label for="language-select">🌐 Language:</label>
-        <select id="language-select">
-            <option value="en" selected>English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-        </select>
-    </div>
-    
-    <form id="task-form">
-        <input type="text" id="task-input" placeholder="Enter your task..." />
-        <select id="priority-select">
-            <option value="low">🟢 Low</option>
-            <option value="medium" selected>🟡 Medium</option>
-            <option value="high">🔴 High</option>
-        </select>
-        <select id="category-select">
-            <option value="general" selected>📁 General</option>
-            <option value="work">💼 Work</option>
-            <option value="personal">🏠 Personal</option>
-            <option value="shopping">🛒 Shopping</option>
-            <option value="study">📚 Study</option>
-        </select>
-        <input type="date" id="due-date-input" />
-        <button type="submit">Add</button>
+    <header>
+      <h1>📝 To-Do List</h1>
+      <div class="controls">
+        <input type="text" id="search-input" placeholder="🔍 Search tasks..." />
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <!-- Task Form -->
+    <form id="task-form" autocomplete="off">
+      <input type="text" id="task-input" placeholder="Task..." required />
+      <select id="priority-select">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <select id="category-select">
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+        <option value="shopping">Shopping</option>
+        <option value="study">Study</option>
+      </select>
+      <input type="date" id="due-date" />
+      <button type="submit">Add</button>
     </form>
-    <div id="suggestions-container">
-        <h3>💡 Suggested Tasks</h3>
-        <ul id="suggestions-list"></ul>
+
+    <!-- Sort -->
+    <div class="sort-controls">
+      <label for="sort-select">Sort:</label>
+      <select id="sort-select">
+        <option value="default">Default</option>
+        <option value="dueDate">Due Date</option>
+        <option value="priority">Priority</option>
+      </select>
     </div>
-    <div id="search-container">
-        <label for="search-input">Search Tasks:</label>
-        <input type="text" id="search-input" placeholder="Type to search..." />
-    </div>
-    <div id="filter-container">
-        <label for="filter-select">Filter by Category:</label>
-        <select id="filter-select">
-            <option value="all" selected>📂 All</option>
-            <option value="work">💼 Work</option>
-            <option value="personal">🏠 Personal</option>
-            <option value="shopping">🛒 Shopping</option>
-            <option value="study">📚 Study</option>
-            <option value="general">📁 General</option>
-        </select>
-    </div>
+
+    <!-- Task List -->
     <ul id="task-list"></ul>
+    <p id="empty-message" class="hidden">🎉 No tasks yet! Add one above.</p>
   </div>
 
-  <script src="scripts.js"></script>
+  <!-- Edit Modal -->
+  <div id="edit-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Edit Task</h2>
+      <form id="edit-form">
+        <input type="text" id="edit-text" required />
+        <select id="edit-priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <select id="edit-category">
+          <option value="work">Work</option>
+          <option value="personal">Personal</option>
+          <option value="shopping">Shopping</option>
+          <option value="study">Study</option>
+        </select>
+        <input type="date" id="edit-date" />
+        <div class="modal-actions">
+          <button type="submit">Save</button>
+          <button type="button" id="cancel-edit">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts.js" defer></script>
 </body>
 </html>
