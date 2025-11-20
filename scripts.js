@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const saveTasks = () => localStorage.setItem("tasks", JSON.stringify(tasks));
 
   const filterTasks = () => {
-    const query = searchInput.value.toLowerCase().trim();
-    return tasks.filter(t => t.text.toLowerCase().includes(query));
+    const query = searchInput.value?.toLowerCase().trim();
+    return tasks.filter(t => t.text?.toLowerCase().includes(query));
   };
 
   const renderTasks = () => {
