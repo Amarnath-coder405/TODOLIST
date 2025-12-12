@@ -8,7 +8,7 @@ This is a simple To-Do List web app built using HTML, CSS, and JavaScript. It al
 
 All interactions happen on the client side with no backend or external dependencies.
 
----
+-----------
 
 ## Features
 
@@ -17,7 +17,7 @@ All interactions happen on the client side with no backend or external dependenc
 - Add, complete, and delete tasks
 - Built with pure HTML, CSS, and JavaScript
 
----
+--------------
 
 ## How to Use
 
