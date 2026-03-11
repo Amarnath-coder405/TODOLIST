@@ -1,6 +1,6 @@
 # To-Do List
 
-This is a simple To-Do List web app built using HTML, CSS, and JavaScript. It allows users to add, delete, and mark tasks as completed. The interface is clean and responsive, designed with basic CSS styling. All task interactions are handled dynamically using JavaScript without any backend..
+This is a simple To-Do List web app built using HTML, CSS, and JavaScript. It allows users to add, delete, and mark tasks as completed. The interface is clean and responsive, designed with basic CSS styling. All task interactions are handled dynamically using JavaScript without any backend
 
 - Add tasks  
 - Delete tasks  
