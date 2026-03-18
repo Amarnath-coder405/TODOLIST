@@ -10,7 +10,7 @@ All interactions happen on the client side with no backend or external dependenc
 
 ---------------------
 
-## Features
+## Features:
 
 - Single HTML file (self-contained)
 - Clean and responsive design
