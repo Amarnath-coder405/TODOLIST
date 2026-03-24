@@ -20,6 +20,7 @@ All interactions happen on the client side with no backend or external dependenc
 ---------------------------
 
 ## How to Use:
+==============
 
 1. **Download or clone** the repository:
 
